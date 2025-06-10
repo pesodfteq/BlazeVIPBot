@@ -83,5 +83,5 @@ def main():
         decidir_e_enviar()
         time.sleep(15)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
