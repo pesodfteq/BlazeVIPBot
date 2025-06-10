@@ -4,7 +4,7 @@ from telegram import Bot
 from collections import Counter
 
 TOKEN = '8001499858:AAEUBMJQzLaJG7wW17Xpjx5hZbaGS8SwzWU'
-CHAT_ID = '4915577545'
+CHAT_ID = '-4889689923'
 bot = Bot(token=TOKEN)
 
 ultima_partida_id = None
