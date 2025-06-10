@@ -1,4 +1,3 @@
-
 import requests
 import time
 from telegram import Bot
@@ -34,22 +33,17 @@ def analisar_tendencias(cores):
 
     mensagem = ""
     if vermelho >= 14:
-        mensagem += "🔴 Tendência muito forte de vermelho (14+ nos últimos 20)
-"
+        mensagem += "🔴 Tendência muito forte de vermelho (14+ nos últimos 20)\n"
     elif preto >= 14:
-        mensagem += "⚫️ Tendência muito forte de preto (14+ nos últimos 20)
-"
+        mensagem += "⚫️ Tendência muito forte de preto (14+ nos últimos 20)\n"
 
     if cores[:5].count(1) >= 4:
-        mensagem += "🔴 Padrão recente vermelho (4+ em 5)
-"
+        mensagem += "🔴 Padrão recente vermelho (4+ em 5)\n"
     if cores[:5].count(2) >= 4:
-        mensagem += "⚫️ Padrão recente preto (4+ em 5)
-"
+        mensagem += "⚫️ Padrão recente preto (4+ em 5)\n"
 
     if branco == 0:
-        mensagem += "⚪️ Nenhum branco nas últimas 20 rodadas
-"
+        mensagem += "⚪️ Nenhum branco nas últimas 20 rodadas\n"
 
     return mensagem.strip()
 
@@ -79,8 +73,7 @@ def decidir_e_enviar():
     reincidente = checar_padrao_reincidente(historico_cores)
 
     if analise:
-        bot.send_message(chat_id=CHAT_ID, text='📊 Análise:
-' + analise)
+        bot.send_message(chat_id=CHAT_ID, text='📊 Análise:\n' + analise)
     if reincidente:
         bot.send_message(chat_id=CHAT_ID, text=reincidente)
 
@@ -90,5 +83,5 @@ def main():
         decidir_e_enviar()
         time.sleep(15)
 
-if __name__ == "__main__":
-    main()
+if _name_ == "_main_":
+    main(
